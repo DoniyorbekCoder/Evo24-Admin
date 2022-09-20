@@ -1,0 +1,11 @@
+{
+  "links": [
+    {
+      "path": "/",
+      "content": "Category"
+    },{
+      "path": "/foods",
+      "content": "Taomlar"
+    }
+  ]
+}
