@@ -1,11 +1,26 @@
 import { axiosInstance } from "../axios";
 import type { Category, Form } from "./entity";
+
+// export async function getCategories(search = ''): Promise<[any, any]> {
+//   try {
+//     const response = await axiosInstance.get(`food/all`, {
+//       params: {
+//         search: search
+//       }
+//     }) as {data: { list: Category[] }}
+//     return [null, response.data]
+//   }
+//   catch(error) {
+//     return [error, null]
+//   }
+// }
+
 export async function getCategories(): Promise<[any, any]> {
   try {
-    const response = await axiosInstance.get(`category/all`) as {data: {list:Category[]}}
+    const response = await axiosInstance.get(`category/all`) as { data: { list: Category[] } }
     return [null, response.data]
   }
-  catch(error) {
+  catch (error) {
     return [error, null]
   }
 }
@@ -14,7 +29,7 @@ export async function postPutCategory(formInfo: Form) {
   try {
     const response = await axiosInstance({
       url: 'category',
-      method: formInfo.id === null ? 'POST': 'PUT',
+      method: formInfo.id === null ? 'POST' : 'PUT',
       data: {
         "id": formInfo.id,
         "name": formInfo.name,
@@ -25,7 +40,7 @@ export async function postPutCategory(formInfo: Form) {
     })
     return [null, response]
   }
-  catch(error) {
+  catch (error) {
     return [error, null]
   }
 }

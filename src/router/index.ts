@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/Category/index.vue'
+import HomeView from '../views/Statistics/index.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,7 +32,47 @@ const router = createRouter({
     {
       path: '/foods',
       name: 'foods',
-      component: () => import('@/views/food/index.vue'),
+      component: () => import('@/views/Foods/index.vue'),
+    },
+    {
+      path: '/category',
+      name: 'category',
+      component: () => import('@/views/Category/index.vue'),
+    },
+    {
+      path: '/couriers',
+      name: 'couriers',
+      component: () => import('@/views/Couriers/index.vue'),
+    },
+    {
+      path: '/orders',
+      name: 'orders',
+      component: () => import('@/views/Orders/index.vue'),
+    },
+    {
+      path: '/users',
+      name: 'users',
+      component: () => import('@/views/Users/index.vue'),
+    },
+    {
+      path: '/staffs',
+      name: 'staffs',
+      component: () => import('@/views/Staffs/index.vue'),
+    },
+    {
+      path: '/address',
+      name: 'address',
+      component: () => import('@/views/Address/index.vue'),
+    },
+    {
+      path: '/socials',
+      name: 'socials',
+      component: () => import('@/views/Socials/index.vue'),
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: () => import('@/views/About/index.vue'),
     }
   ]
 })

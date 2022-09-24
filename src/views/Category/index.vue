@@ -29,8 +29,6 @@ async function getItems() {
     OPEN_LOADING_MODAL()
     // const [error, response] = await getCategories(searchInput.value)
     const [error, response] = await getCategories()
-    console.log(response);
-    
     CLOSE_LOADING_MODAL()
     items.value.list = response
 }
@@ -41,19 +39,15 @@ function openModal(val: any) {
 getItems()
 </script>
 <template>
-<div class="fixed top-0 bottom-0 right-0 w-full overflow-y-scroll bg-white-secondary">
-  <div class="flex justify-between items-center mb-30">
-    <p class="text-black-primary text-xl font-bold">Kategoriyalar</p>
-
-    <div class="flex gap-15 items-center">
-      <!-- <div class="bg-white-primary flex items-center gap-5 p-5 px-10 rounded" role="button">
-        <img src="../../assets/images/search.png" class="w-18 h-18" alt="">
-        <input type="search" name="search" v-model="searchInput" @input="getItems" placeholder="Qidiruv" class="placeholder:text-gray-primary text-black-primary focus:outline-none py-10 text-sm">
-      </div> -->
-      <button class="bg-blue-primary flex items-center px-30 py-15 gap-5 rounded" role="button" @click="openModal">
-        <img class="w-24 h-24" src="@/assets/images/add-white.png" alt="">
-        <p class="text-sm text-white-primary font-medium leading-21 hidden md:block">Yangi kategoriya qo‘shish</p>
-      </button>
+<div class="fixed top-0 bottom-0 right-0 w-full overflow-y-scroll bg-white-primary">
+  <div class="flex items-center gap-16 mb-30">
+    <button class="bg-yellow-primary flex items-center px-32 py-16 gap-5 rounded" role="button" @click="openModal">
+      <img class="w-21 h-21" src="@/assets/images/add.png" alt="">
+      <p class="text-sm text-white-primary font-medium leading-21 uppercase hidden md:block">Yangi kategoriya qo‘shish</p>
+    </button>
+    <div class="bg-white-secondary flex items-center gap-8 py-6 px-32 rounded border border-gray-secondary" role="button">
+      <img src="../../assets/images/search.png" class="w-18 h-18" alt="">
+      <input type="search" name="search" v-model="searchInput" @input="getItems" placeholder="Qidiruv" class="w-100 placeholder:text-gray-primary text-black-primary font-semibold placeholder:font-normal focus:outline-none py-10 text-sm bg-white-secondary">
     </div>
   </div>
   

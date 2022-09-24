@@ -8,14 +8,6 @@ const data = reactive<{username: string, password: string, passwordError: string
   passwordError: '',
 })
 
-
-// function SubmitDevice(){
-//   let deviceUuid = uuid.v5.DNS;
-//   console.log(deviceUuid);
-    
-// }
-// SubmitDevice()
-
 function handleSubmit() {
   if (data.passwordError === '') {
     handleAuth(data).then(res => {
@@ -45,7 +37,7 @@ function handleSubmit() {
             <input class="w-full rounded text-sm leading-17 text-black-secondary border border-gray-secondary focus:outline-none bg-gray-secondary h-51 px-20 py-12" v-model="data.username" type="text" name="username" id="username" required  autocomplete="off">
             <label class="label transition-all text-sm leading-17 w-full text-black-secondary absolute top-15 left-25" for="username">Foydalanuvchi</label>
           </div>
-          <div class="w-full relative mt-3.5">
+          <div class="w-full relative mt-15">
             <input class="w-full rounded text-sm leading-17 text-black-secondary border border-gray-secondary focus:outline-none bg-gray-secondary h-51 px-20 py-12" v-model="data.password" type="password" name="password" id="password" required>
             <label class="label transition-all text-sm leading-17 w-full text-black-secondary absolute top-15 left-25" for="password">Parol</label>
           </div>

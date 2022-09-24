@@ -3,7 +3,6 @@ import type { Form } from './entity'
 export * from './api'
 export type { Food, Form } from './entity'
 export * from '../common'
-export * from '../category'
 
 export function reset(obj: Form) {
   obj.id = null,

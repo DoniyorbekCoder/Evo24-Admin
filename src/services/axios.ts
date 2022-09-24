@@ -14,7 +14,7 @@ axiosInstance.interceptors.request.use(
     const token = sessionStorage.getItem('token')
     config.headers = {
       // 'Authorization': `Bearer ` + token
-      'Authorization': `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlzcyI6ImFkbWluLmV2bzI0LnV6IiwiZXhwIjoxNjY2MjY3NTk0LCJ1dWlkIjoidXVsaWQxMjMyMyJ9.1kjDO1c14yrsDoRcsrOYMubcMm-_cQ3wAkhlMyYOz8I9fV1xgOR026OaBfMOeGLxr4n_PgdNzIdCCJN27x3oPQ`
+      'Authorization': `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlzcyI6ImFkbWluLmV2bzI0LnV6IiwiZXhwIjoxNjY2NTAzOTYxLCJ1dWlkIjoiYzcwYWNlMTItZmQyYi00MzExLWE4MjYtZjk2YTExMzEyZDdlLTIifQ.vFN2Xu8UIMRqzYrt9RZPILjuQ6BUo-Umbl5UvjA63jp773apo1iyJzF2N4SPG3NrsZTutx6MAdOhfyHbd8NWDQ`
     }
 
     return config

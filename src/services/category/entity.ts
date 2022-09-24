@@ -8,6 +8,7 @@ export interface Category {
    active: boolean,
    foods: Food[],
 }
+
 export interface Form {
    id: number | null,
    name: Lang,

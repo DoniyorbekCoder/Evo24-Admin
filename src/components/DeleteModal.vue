@@ -18,18 +18,21 @@ async function submit() {
 <template>
   <Modal v-if="_deleteModal.visible">
     <div class="h-full w-full flex justify-center items-center deleteBg">
-      <div class="bg-white-primary p-30 shadow-lg rounded-15 w-400" :class="_deleteModal.visible ? 'z-0 scale-100 animate-blowUp': ''">
+      <div class="bg-white-primary p-32 shadow-lg rounded-20 w-400" :class="_deleteModal.visible ? 'z-0 scale-100 animate-blowUp': ''">
         <div class="flex items-start justify-between">
-          <div class="bg-red-secondary border border-red-primary w-60 h-60 flex items-center justify-center rounded-full">
-            <img src="@/assets/images/delete.png" class="w-30 h-30" alt="">
+          <div class="bg-red-secondary  w-54 h-54 flex items-center justify-center rounded-full">
+            <img src="@/assets/images/delete.png" class="w-25 h-25" alt="">
           </div>
-          <img src="@/assets/images/close-black.png" class="cursor-pointer icon-close w-24 h-24" @click="CLOSE_DELETE" />
+          <img src="@/assets/images/close-black.png" class="cursor-pointer w-24 h-24" @click="CLOSE_DELETE" />
         </div>
         <div class="flex flex-col my-30">
-          <p class="text-lg font-semibold text-black-primary">{{_deleteModal.text}}</p>
+          <p class="text-lg leading-28 font-grotesk font-semibold text-black-primary">{{_deleteModal.text}}</p>
           <p class="text-sm text-black-secondary leading-4 py-1.5 break-words">{{_deleteModal.title}}</p>
         </div>
-        <button @click="submit" class="font-medium px-30 py-15 bg-red-primary text-white-primary rounded" type="button">O‘chirish</button>
+        <button @click="submit" class="flex items-center gap-8 px-32 py-16 bg-red-primary rounded" type="button">
+          <img class="w-21 h-21" src="@/assets/images/delete-btn.png" alt="">
+          <p class="font-semibold text-sm text-white-primary uppercase">Ha, o‘chirish</p>
+        </button>
       </div>
     </div>
   </Modal>
@@ -38,6 +41,7 @@ async function submit() {
 
 <style scoped>
   .deleteBg {
-    background: rgba(234, 234, 234, 0.7);
+    background: rgba(1, 14, 56, 0.25);
+    backdrop-filter: blur(5px);
   }
 </style>

@@ -2,10 +2,43 @@
   "links": [
     {
       "path": "/",
-      "content": "Category"
-    },{
+      "content": "Statistika"
+    },
+    {
       "path": "/foods",
-      "content": "Taomlar"
+      "content": "Ovqatlar"
+    },
+    {
+      "path": "/category",
+      "content": "Kategoriyalar"
+    },
+    {
+      "path": "/couriers",
+      "content": "Kuryerlar"
+    },
+    {
+      "path": "/orders",
+      "content": "Buyurtmalar"
+    },
+    {
+      "path": "/users",
+      "content": "Foydalanuvchilar"
+    },
+    {
+      "path": "/staffs",
+      "content": "Xodimlar"
+    },
+    {
+      "path": "/address",
+      "content": "Manzillar"
+    },
+    {
+      "path": "/socials",
+      "content": "Ijtimoiy tarmoqlar"
+    },
+    {
+      "path": "/about",
+      "content": "Ilova haqida"
     }
   ]
 }

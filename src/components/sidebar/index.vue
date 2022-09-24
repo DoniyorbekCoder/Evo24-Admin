@@ -4,7 +4,7 @@ const src = ['icon-category', 'icon-book', 'icon-video', 'ri-mic-2-fill', 'icon-
 </script>
 
 <template>
-  <aside class="w-full p-10 md:p-20 lg:p-30 bg-white-primary min-h-screen">
+  <aside class="w-full p-10 md:p-20 lg:p-30 bg-white-secondary min-h-screen">
       <router-link to="/">
         <div role="button" class="flex items-center gap-10">
           <img src="../../assets/images/icon.svg" alt="" />
@@ -30,7 +30,7 @@ p {
 }
 
 .router-link-active i{
-  color: #6D71F9;
+  color: #FFCA07;
 }
 
 .router-link-active p {

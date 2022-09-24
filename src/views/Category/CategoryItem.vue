@@ -26,23 +26,21 @@ const props = defineProps({
 })
 </script>
 <template>
-   <div class="bg-white-primary rounded-15 p-15 flex relative" @mouseenter="iconActive = !iconActive" @mouseleave="iconActive = !iconActive;">
+   <div class="bg-white-secondary rounded-16 p-32 border border-gray-secondary flex relative" @mouseenter="iconActive = !iconActive" @mouseleave="iconActive = !iconActive;">
       <!-- <base-image :src="props.image" alt="photo" class="w-32 h-42 object-cover rounded-md" /> -->
-      <div class="flex gap-15 absolute top-15 right-15 z-10" v-if="iconActive">
-         <div role="button" class="bg-yellow-secondary w-44 h-44 shrink-0 flex items-center justify-center rounded-full border border-yellow-primary"
+      <div class="flex gap-10 absolute top-32 right-32 z-10" v-if="iconActive">
+         <div role="button" class="bg-yellow-secondary w-44 h-44 shrink-0 flex items-center justify-center rounded-full"
             @click="emit('edit', props)">
             <img class="w-24 h-24" src="@/assets/images/edit.png" alt="">
          </div>
-         <div role="button" class="bg-red-secondary w-44 h-44 shrink-0 flex items-center justify-center rounded-full border border-red-primary"
+         <div role="button" class="bg-red-secondary w-44 h-44 shrink-0 flex items-center justify-center rounded-full"
             @click="emit('remove', props.id, props.name.uz)">
             <img class="w-24 h-24" src="@/assets/images/delete.png" alt="">
          </div>
       </div>
       <div>
-         <p>{{props.id}}</p>
-         <p>Active: {{props.active}}</p>
-         <p>{{props.name.uz}}</p>
-         <p>{{props.foods}}</p>
+         <p class="text-lg leading-25 font-extrabold text-black-primary font-grotesk mb-4">{{props.name.uz}}</p>
+         <p class="text-sm leading-17 text-black-secondary">{{props.foods.length}} ta taom mavjud</p>
       </div>
    </div>
 </template>
